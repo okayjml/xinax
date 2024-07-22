@@ -1,0 +1,234 @@
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98773,98770');
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SF Pro Display', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0) !important;
+    overflow: hidden;
+    
+    color: azure !important;
+}
+canvas{
+    background-color: #000 !important;
+    display: none;
+}
+
+h1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    font-weight: 1000;
+    letter-spacing: 7px;
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    animation: slide 0.5s forwards !important;
+}
+
+.loading {
+    animation: slideLoading 0.5s forwards !important;
+}
+
+._container {
+    -webkit-animation:f 1s forwards;
+-webkit-animation-delay:2.7s;
+}
+
+@keyframes slide {
+    0% { transform: translateY(-50px)}
+    80% { height: translateY(-20px); }
+    100% { height: translateY(0px); }
+  }
+
+  @keyframes f {
+    0% { opacity: 1; }
+    80% { opacity: 1;  }
+    100% { opacity: 0;  }
+  }
+
+  @keyframes slideLoadingText {
+    0% { transform: translate(-100px, 100px)}
+    80% { height: translate(-20px, 20px); }
+    100% { height: translateY(0, 0); }
+  }
+
+h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    transition: 1.5s;
+    animation-delay: 3s;
+    animation: load 5s forwards !important;
+    
+} 
+
+@keyframes load {
+    0% { height: 0%; }
+    10% { height: 0%; }
+    100% { height: 100%; }
+  }
+.loader {
+    border: 8px solid #054056; /* Light grey */
+    border-top: 8px solid #0bbeff; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s infinite linear;
+  }
+
+  @keyframes slideLoading {
+    0% { transform: translate(-100px, 100px)}
+    80% { height: translate(-20px, 20px); }
+    100% { height: translate(0, 0); }
+  }
+
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loading {
+      font-size: 0.85rem;
+      letter-spacing: 6px;
+      color: rgb(140, 140, 140);
+  }
+
+  .canvasFade {
+    animation: cf 4.8s forwards;
+  }
+
+  @keyframes cf {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .containerC {
+    position: relative;
+    text-align: center;
+}
+.containerC > div {
+    position: absolute;
+    top: -8%;
+    left: 0;
+    right: 0;
+    transform: scale(0.6);
+    margin-top: -9px;
+}
+
+.card-footer {
+  background-color:rgb(0, 0, 0);
+  color: white;
+  border:4px solid white;
+  margin-bottom: 40px;
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 12px;
+  background-color: #0bbeff;
+}
+
+.btn-success {
+  font-size: 2rem;
+  padding: 12px;
+  background-color: #0bbeff !important;
+}
+
+.btn-success:hover {
+  font-size: 2rem;
+  padding: 12px;
+  background-color: #0bafeb !important;
+}
+
+.btn-success:focus {
+  font-size: 2rem;
+  padding: 12px;
+  background-color: #0bafeb !important;
+}
+
+.btn-success:active {
+  font-size: 2rem;
+  padding: 12px;
+  background-color: #0bafeb !important;
+}
+
+.img-fluid {
+  border:4px solid white;
+  border-bottom: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .containerC > div {
+    top: -80%;
+}
+
+body {
+  overflow-y: unset;
+}
+}
+
+@media only screen and (max-width: 750px) {
+  .containerC > div {
+    top: -75%;
+}
+body {
+  overflow-y: unset;
+}
+h1 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  font-weight: 1000;
+  letter-spacing: 7px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  animation: slide 0.5s forwards !important;
+}
+}
+
+@media only screen and (max-width: 670px) {
+  .containerC > div {
+    top: -70%;
+}
+body {
+  overflow-y: unset;
+}
+}
+@media only screen and (max-width: 570px) {
+  .containerC > div {
+    top: -63%;
+}
+body {
+  overflow-y: unset;
+}
+}
+
+@media only screen and (max-width: 410px) {
+  .containerC > div {
+    top: -57%;
+}
+body {
+  overflow-y: unset;
+}
+}
